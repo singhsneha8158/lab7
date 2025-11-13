@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accordion Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-3">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<h4 class="text-center mb-3">📊 Dashboard</h4>
+
+<div class="accordion" id="dash">
+  <div class="accordion-item">
+    <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#c1">Cards</button></h2>
+    <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#dash">
+      <div class="accordion-body d-flex gap-2">
+        <div class="card text-bg-primary flex-fill"><div class="card-body">Users:1300</div></div>
+        <div class="card text-bg-success flex-fill"><div class="card-body">Sales:$35k</div></div>
+        <div class="card text-bg-warning flex-fill"><div class="card-body">Orders:100</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#c2">Table</button></h2>
+    <div id="c2" class="accordion-collapse collapse" data-bs-parent="#dash">
+      <div class="accordion-body p-0">
+        <table class="table table-sm table-striped m-0">
+          <tr><th>#</th><th>User</th><th>Amt</th><th>Status</th></tr>
+          <tr><td>1</td><td>Aman</td><td>$500</td><td><span class="badge bg-success">Paid</span></td></tr>
+          <tr><td>2</td><td>Meenal</td><td>$120</td><td><span class="badge bg-warning">Pending</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#c3">Form</button></h2>
+    <div id="c3" class="accordion-collapse collapse" data-bs-parent="#dash">
+      <div class="accordion-body">
+        <form class="row g-2">
+          <input class="form-control col" placeholder="Name">
+          <input type="email" class="form-control col" placeholder="Email">
+          <select class="form-select col"><option>Admin</option><option>User</option></select>
+          <button class="btn btn-primary col">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#c4">Alerts</button></h2>
+    <div id="c4" class="accordion-collapse collapse" data-bs-parent="#dash">
+      <div class="accordion-body">
+        <div class="alert alert-success p-2 m-1">✅ User added</div>
+        <div class="alert alert-warning p-2 m-1">⚠️ Server load high</div>
+        <div class="alert alert-danger p-2 m-1">❌ Payment failed</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
